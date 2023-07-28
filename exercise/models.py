@@ -11,7 +11,7 @@ class Person(models.Model):
 
 class Student(Person):
     course = models.TextField(null=False)
-    hasScholarship = models.BooleanField(null=False)
+    average = models.FloatField(null=False)
 
     class Meta:
         db_table = "students"    
