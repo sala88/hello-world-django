@@ -22,14 +22,27 @@ Creazione di una semplice applicazione "Hello World" Django che racchiuda almeno
 <h2><a name="primo">Ereditarietá nei modelli</a></h2>
 <a href="#indice">Torna all'indice</a>
 <br>
+E' stata creata una classe astratta Person (in /exercise/models.py) da cui sono state estese le due classi Student e Teacher che danno poi vita alle tabelle students e teachers<br>
 <br>
+<code>
+class Person(models.Model):<br>
+    &emsp;&emsp;fist_name = models.DateTimeField(null=False)<br>
+    &emsp;&emsp;last_name = models.DateTimeField(null=False)<br>
+    &emsp;&emsp;class Meta:<br>
+        &emsp;&emsp;&emsp;&emsp;abstract = True<br>
 <br>
+class Students(Person):<br>
+    &emsp;&emsp;course = models.TextField(null=False)<br>
+    &emsp;&emsp;hasScholarship = models.BooleanField(null=False)<br>
+    &emsp;&emsp;class Meta:
+        &emsp;&emsp;&emsp;&emsp;db_table = "students"<br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
+class Teacher(Person):<br>
+    &emsp;&emsp;qualification  = models.TextField(null=False)<br>
+    &emsp;&emsp;salary = models.FloatField(null=False)<br>
+    &emsp;&emsp;class Meta:<br>
+        &emsp;&emsp;&emsp;&emsp;db_table = "teachers"<br>
+</code>
 <br>
 <br>
 <h2><a name="secondo">Decorator</a></h2>
@@ -83,7 +96,7 @@ Documentazione: https://docs.djangoproject.com/en/4.2/topics/db/queries/<br>
 
 <h2><a name="settimo"></a>Utilizzo di template</h2>
 <a href="#indice">Torna all'indice</a><br>
-Per servire questa pagina sono stati realizzati dei template nella cartella dell'app /exercise/templates/<br>
+Per servire questa pagina sono stati realizzati dei template nella cartella dell'app /exercise/templates/ che utilizzano boostrap.<br>
 <br>
 <br>
 
