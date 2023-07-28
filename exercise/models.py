@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Person(models.Model):
-    fist_name = models.DateTimeField(null=False)
-    last_name = models.DateTimeField(null=False)
+    first_name = models.TextField(null=False)
+    last_name = models.TextField(null=False)
     
     class Meta:
         abstract = True
