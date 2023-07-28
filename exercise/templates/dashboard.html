@@ -72,7 +72,7 @@ Documentazione: https://docs.djangoproject.com/en/4.2/topics/signals/<br>
 Non ho molta fantasia, ho preso il primo studente "Mario" e gli ho raddoppiato la media.<br>
 <code>
 from django.db.models import F<br>
-student = Reporters.objects.get(name="Mario")<br>
+student = Student.objects.get(first_name="Mario")<br>
 student.average = F("average") * 2<br>
 student.save()<br>
 </code>

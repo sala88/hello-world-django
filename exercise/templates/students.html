@@ -68,4 +68,9 @@
         </div>
     </div>
     <div class="col-4"></div>
+
+    <form action="/exercise/doubleaverage" method="GET">
+		{% csrf_token %}
+		<button type="submit" class="btn btn-primary btn-sm mb-2">Double Average</button>
+	</form>
 </div>
