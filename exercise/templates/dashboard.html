@@ -1,0 +1,103 @@
+{% include "static/header.html" %}
+<br />
+<h1 class="mt-3"><a name="indice">Exercise</a></h1>
+<br />
+Creazione di una semplice applicazione "Hello World" Django che racchiuda almeno un esempio per ogni argomento di seguito elencato:<br>
+<br>
+<ul>
+    <li><a href="#primo">Ereditarietá nei modelli</a></li>
+    <li><a href="#secondo">Decorator</a></li>
+    <li><a href="#terzo">Signals</a></li>
+    <li><a href="#quarto">F() expressions</a></li>
+    <li><a href="#quinto">Q() expressions</a></li>
+    <li><a href="#sesto">Lazy QuerySets</a></li>
+    <li><a href="#settimo">Utilizzo di template</a></li>
+    <li><a href="#ottavo">Una pagina web personalizzata che salvi informazioni presi in input tramite form e salvati nel DB</a></li>
+</ul>
+<br>
+<a href="#facoltativo">Esercizio facoltativo</a><br>
+É gradito ma non mandatorio l'utilizzo di docker/docker compose per l'esecuzione della web application che includa Django, DB(mysql), gunicorn ed ngninx.
+<br>
+<br>
+<h2><a name="primo">Ereditarietá nei modelli</a></h2>
+<a href="#indice">Torna all'indice</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2><a name="secondo">Decorator</a></h2>
+<a href="#indice">Torna all'indice</a><br>
+E' stato utilizzato il decoratore @require_http_methods(["GET"]) per servire questa pagina:
+<br>
+<br>
+<code>
+    from django.views.decorators.http import require_http_methods<br>
+    from django.shortcuts import render<br>
+    <br>
+    @require_http_methods(["GET"])<br>
+    def dashboard(request):<br>
+        return render(request, "dashboard.html")<br>
+</code>
+<br>
+Documentazione: https://docs.djangoproject.com/en/4.2/topics/http/decorators/<br>
+<br>
+<br>
+<h2><a name="terzo">Signals</a></h2>
+<a href="#indice">Torna all'indice</a><br>
+<br>
+Documentazione: https://docs.djangoproject.com/en/4.2/topics/signals/<br>
+
+
+
+
+<h2><a name="quarto">F() expressions</a></h2>
+<a href="#indice">Torna all'indice</a><br>
+
+
+Documentazione: https://docs.djangoproject.com/en/4.2/ref/models/expressions/#f-expressions<br>
+<br>
+<br>
+
+
+<h2><a name="quinto">Q() expressions</a></h2>
+<a href="#indice">Torna all'indice</a><br>
+Documentazione: https://docs.djangoproject.com/en/4.2/topics/db/queries/<br>
+<br>
+<br>
+
+
+<h2><a name="sesto"></a>Lazy QuerySets</h2>
+<a href="#indice">Torna all'indice</a><br>
+
+Documentazione: https://docs.djangoproject.com/en/4.2/topics/db/queries/<br>
+<br>
+<br>
+
+
+<h2><a name="settimo"></a>Utilizzo di template</h2>
+<a href="#indice">Torna all'indice</a><br>
+Per servire questa pagina sono stati realizzati dei template nella cartella dell'app /exercise/templates/<br>
+<br>
+<br>
+
+
+<h2><a name="ottavo"></a>Una pagina web personalizzata che salvi informazioni presi in input tramite form e salvati nel DB</h2>
+<a href="#indice">Torna all'indice</a><br>
+<br>
+<br>
+
+
+
+
+<h2><a name="facoltativo">Esercizio facoltativo</a></h2>
+<a href="#indice">Torna all'indice</a><br>
+Non eseguito per limiti di tempo.
+<br>
+<br>
